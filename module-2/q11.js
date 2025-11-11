@@ -9,3 +9,12 @@ function prime(num){
     }
     return true
 }
+
+//checking even or odd
+let num=0;
+if(num%2==0){
+    return true
+}
+else{
+    return false
+}
