@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            text-decoration: none;
+        }
         .navbar{
             font-family: sans-serif;
             background-color: white;
@@ -34,6 +37,7 @@
            display: inline;
            font-size: 10px;
            text-decoration: none;
+           
             
 
         }
@@ -118,6 +122,52 @@
             color: red;
             
         }
+
+        #Bottom_section{
+            
+            display: flex;
+            background-color: rgb(223, 221, 221);
+            flex-direction:column;
+            
+            
+            p{
+                text-align: right;
+            }
+            
+           
+
+            
+        }
+        #imageone{
+           display: flex;
+           width: 50%;
+           height: 70%;
+           align-items: flex-end;
+           overflow: auto;
+           
+       }
+       #imagetwo{
+                width: 40%;
+                align-items: end;
+                justify-content: end;
+                padding-right: -50px;
+                
+               
+            }
+        h1{
+            text-align:right;
+            padding-left: 10rem;
+            p{
+                padding-top: -2rem;
+                text-align: right;
+                font: 5px sans-serif;
+            }
+          
+            
+        }
+        
+        
+        
     </style>
 </head>
 <body>
@@ -125,8 +175,8 @@
     <nav class="navbar">
         <div class="divnav">
             <a class="app_name" href="#">Domino's Pizza</a>
-            <ul>
-                <li><a href="#">OUR MENU</a></li>
+            <ul style="text-decoration: none;">
+                <li ><a href="#">OUR MENU</a></li> 
                 <li><a href="#">DOMINOS STORES</a></li>
                 <li><a href="#">GIFT CARD</a></li>
                 <li><a href="#">CORPORATE ENQUIRY</a></li>
@@ -238,6 +288,22 @@
             <div>DISCOVER PIZZA</div>
         </div>
 
+    </div>
+
+    <div id="Bottom_section">
+                 <h1>Unlock Exclusive Offers</h1>
+                <p>For Ligtening fast ordering experience download the Domino's app</p>
+                <div id="imagetwo">
+                <img  src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="">
+                <img  src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="">
+                </div>
+        <div id="phone">
+            <img id="imageone" src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt="">
+            <div class="side">
+               
+                
+            </div>
+        </div>
     </div>
     
 </body>
