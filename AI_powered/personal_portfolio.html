@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+    /* ---------------- GLOBAL ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: #f7f9fb;
+  color: #333;
+}
+
+/* Soft pastel theme */
+:root {
+  --soft-blue: #cce8ff;
+  --soft-pink: #ffd6e8;
+  --soft-yellow: #fff3c4;
+  --soft-green: #d4f5d4;
+  --text-dark: #1b1b1b;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #116d6e;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #116d6e;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  text-align: center;
+  padding: 80px 12%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #116d6e;
+}
+
+.hero span {
+  color: #e84a5f;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #116d6e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0d4e4f;
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills {
+  padding: 60px 10%;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #116d6e;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--soft-blue);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.skill-card:nth-child(2) { background: var(--soft-pink); }
+.skill-card:nth-child(3) { background: var(--soft-yellow); }
+.skill-card:nth-child(4) { background: var(--soft-green); }
+.skill-card:nth-child(5) { background: var(--soft-pink); }
+.skill-card:nth-child(6) { background: var(--soft-yellow); }
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #116d6e;
+  padding: 40px 10%;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffd6e8;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+.copy {
+  margin-top: 20px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablets */
+@media (max-width: 1023px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+    <div class="logo">MyPortfolio</div>
+
+    <nav id="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+</header>
+
+<!-- ---------------- HERO SECTION ---------------- -->
+<section class="hero">
+    <h1>Hello, I'm <span>Yasaswini Reddy</span></h1>
+    <p>
+        A passionate learner exploring Web Development and building beautiful,
+        responsive web pages using HTML, CSS and Javascript.
+    </p>
+
+    <a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<!-- ---------------- SKILLS SECTION ---------------- -->
+<section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">Responsive Design</div>
+        <div class="skill-card">Power BI</div>
+        <div class="skill-card">Artificial Inteligence</div>
+        <div class="skill-card">Machine Learning</div>
+    </div>
+</section>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer id="contact">
+    <p>Connect with me</p>
+
+    <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+    </div>
+
+    <p class="copy">© 2025 MyPortfolio. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("nav-links").classList.toggle("show");
+});
+</script>
+
+</body>
+</html>
